@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Personal</title>
+
     <style>
         #Foto{
             width: 120px;
@@ -14,43 +15,88 @@
 </head>
 
 <body>
+
     <header>
-        <h1>Portfolio de Alberto</h1>
+        <h1>Mi Portfolio</h1>
+
         <nav>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#sobreMi">Sobre mí</a></li>
                 <li><a href="#habilidades">Habilidades</a></li>
                 <li><a href="#enlaces">Enlaces</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
+
         <section id="inicio">
-            <h2>Inicio</h2>
-            <p>Bienvenido a mi portfolio personal.</p>
+            <article>
+                <h2>Inicio</h2>
+                <p>Bienvenido a mi portfolio personal.</p>
+            </article>
         </section>
+
         <section id="sobreMi">
-            <h2>Sobre mí</h2>
-            <p>Soy Alberto, estudiante de DAM, interesado en la programación y el desarrollo web.</p>
-            <img id="Foto" src="MiFoto.jpeg" alt="Imagen personal">
+            <article>
+                <h2>Sobre mí</h2>
+                <p>Soy Alberto, estudiante de DAM. Me interesa la programación y el desarrollo web.</p>
+                <p>Actualmente estoy aprendiendo Java, HTML y bases de datos, mejorando poco a poco mis conocimientos.</p>
+                <img id="Foto" src="MiFoto.jpeg" alt="Foto personal">
+            </article>
         </section>
+
         <section id="habilidades">
-            <h2>Habilidades laborales</h2>
-            <ul>
-                <li>Programación en Java</li>
-                <li>Desarrollo web (HTML)</li>
-                <li>Bases de datos (MySQL)</li>
-            </ul>
+            <article>
+                <h2>Habilidades</h2>
+                <ul>
+                    <li>Programación en Java</li>
+                    <li>HTML y CSS</li>
+                    <li>Bases de datos con MySQL</li>
+                </ul>
+            </article>
         </section>
+
         <section id="enlaces">
-            <h2>Enlaces</h2>
-            <p> <a href="https://github.com/DelOlmo05" target="_blank">Mi GitHub</a> </p>
+            <article>
+                <h2>Enlaces</h2>
+                <p>Puedes ver mis proyectos aquí:</p>
+                <a href="https://github.com/DelOlmo05" target="_blank">Mi GitHub</a>
+            </article>
         </section>
+
+        <section id="contacto">
+            <article>
+                <h2>Formulario de contacto</h2>
+
+                <form action="#" method="post">
+                    <fieldset>
+                        <legend>Contacto</legend>
+
+                        <label for="nombre">Nombre:</label><br>
+                        <input type="text" id="nombre" name="nombre" required><br><br>
+
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email" required><br><br>
+
+                        <label for="mensaje">Mensaje:</label><br>
+                        <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br><br>
+
+                        <button type="submit">Enviar</button>
+                    </fieldset>
+                </form>
+
+            </article>
+        </section>
+
     </main>
+
     <footer>
-        <p>2026 Portfolio Personal</p>
+        <p>2026 - Mi Portfolio Personal</p>
     </footer>
+
 </body>
 
 </html>
