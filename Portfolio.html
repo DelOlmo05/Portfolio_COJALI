@@ -7,9 +7,105 @@
     <title>Portfolio Personal</title>
 
     <style>
-        #Foto{
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: lightgray;
+            color: black;
+        }
+
+        header {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        section {
+            background-color: white;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        h1,
+        h2 {
+            margin-top: 0;
+        }
+
+        #foto {
             width: 120px;
             height: 150px;
+            border-radius: 8px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        a {
+            color: blue;
+        }
+
+        form {
+            margin-top: 10px;
+        }
+
+        fieldset {
+            border: 1px solid gray;
+            border-radius: 8px;
+            padding: 15px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: steelblue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: gray;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 15px;
         }
     </style>
 </head>
@@ -33,20 +129,37 @@
     <main>
 
         <section id="inicio">
-            <article>
-                <h2>Inicio</h2>
-                <p>Bienvenido a mi portfolio personal.</p>
-            </article>
-        </section>
 
-        <section id="sobreMi">
-            <article>
-                <h2>Sobre mí</h2>
-                <p>Soy Alberto, estudiante de DAM. Me interesa la programación y el desarrollo web.</p>
-                <p>Actualmente estoy aprendiendo Java, HTML y bases de datos, mejorando poco a poco mis conocimientos.</p>
-                <img id="Foto" src="MiFoto.jpeg" alt="Foto personal">
-            </article>
-        </section>
+    <h2>Inicio</h2>
+
+    <img id="foto" src="MiFoto.jpeg" alt="Foto personal">
+
+    <h3>Alberto Del Olmo Lara</h3>
+
+    <p>
+        Estudiante de Desarrollo de Aplicaciones Multiplataforma (DAM).
+    </p>
+
+    <p>
+        Me interesa la programación y el desarrollo web.
+    </p>
+
+</section>
+
+<section id="sobreMi">
+
+    <h2>Sobre mí</h2>
+
+    <p>
+        Actualmente estoy aprendiendo Java, HTML, CSS y bases de datos.
+    </p>
+
+    <p>
+        Mi objetivo es seguir mejorando mis conocimientos y desarrollar
+        nuevas habilidades relacionadas con la informática.
+    </p>
+
+</section>
 
         <section id="habilidades">
             <article>
@@ -64,6 +177,8 @@
                 <h2>Enlaces</h2>
                 <p>Puedes ver mis proyectos aquí:</p>
                 <a href="https://github.com/DelOlmo05" target="_blank">Mi GitHub</a>
+                <p>Email:</p>
+                <a href="delolmolaraa@gmail.com">delolmolaraa@gmail.com</a>
             </article>
         </section>
 
