@@ -18,11 +18,32 @@
             color: black;
         }
 
+        body.oscuro {
+            background-color: #222;
+            color: white;
+        }
+
+        body.oscuro section,
+        body.oscuro aside {
+            background-color: #333;
+        }
+
+        body.oscuro .proyecto {
+            background-color: #444;
+        }
+
         header {
             background-color: black;
             color: white;
             text-align: center;
             padding: 20px;
+            position: relative;
+        }
+
+        #botonTema {
+            position: absolute;
+            top: 20px;
+            right: 20px;
         }
 
         nav ul {
@@ -32,6 +53,7 @@
             display: flex;
             justify-content: center;
             gap: 20px;
+            flex-wrap: wrap;
         }
 
         nav a {
@@ -50,14 +72,15 @@
             display: flex;
             gap: 20px;
             align-items: flex-start;
+            flex-wrap: wrap;
         }
 
         main {
-            flex: 3;
+            flex: 3 1 500px;
         }
 
         aside {
-            flex: 1;
+            flex: 1 1 250px;
             background-color: white;
             padding: 20px;
             border-radius: 8px;
@@ -90,13 +113,17 @@
             color: blue;
         }
 
+        body.oscuro a {
+            color: lightblue;
+        }
+
         .proyectos {
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 20px;
         }
 
         .proyecto {
-            flex: 1;
             background-color: lightgray;
             padding: 15px;
             border-radius: 8px;
@@ -157,17 +184,17 @@
             background-color: gray;
         }
     </style>
-
 </head>
 
 <body>
 
     <header>
 
+        <button id="botonTema">Modo oscuro</button>
+
         <h1>Mi Portfolio</h1>
 
         <nav>
-
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#sobreMi">Sobre mí</a></li>
@@ -175,7 +202,6 @@
                 <li><a href="#proyectos">Proyectos</a></li>
                 <li><a href="#enlaces">Enlaces</a></li>
             </ul>
-
         </nav>
 
     </header>
@@ -242,36 +268,27 @@
                 <div class="proyectos">
 
                     <article class="proyecto">
-
                         <h3>Sistema de gestión empresarial</h3>
-
                         <p>
                             Aplicación orientada al control de clientes,
                             empleados, pedidos y facturación mediante MySQL.
                         </p>
-
                     </article>
 
                     <article class="proyecto">
-
                         <h3>Plataforma de análisis de datos</h3>
-
                         <p>
                             Proyecto enfocado al almacenamiento y consulta
                             de información para generar estadísticas e informes.
                         </p>
-
                     </article>
 
                     <article class="proyecto">
-
                         <h3>Gestión de gimnasio</h3>
-
                         <p>
                             Sistema para administrar usuarios, rutinas,
                             entrenamientos y seguimiento del progreso físico.
                         </p>
-
                     </article>
 
                 </div>
@@ -370,6 +387,29 @@
         </div>
 
     </footer>
+
+    <script>
+        const botonTema = document.getElementById("botonTema");
+
+        if (localStorage.getItem("tema") === "oscuro") {
+            document.body.classList.add("oscuro");
+            botonTema.textContent = "Modo claro";
+        }
+
+        botonTema.addEventListener("click", function () {
+
+            document.body.classList.toggle("oscuro");
+
+            if (document.body.classList.contains("oscuro")) {
+                localStorage.setItem("tema", "oscuro");
+                botonTema.textContent = "Modo claro";
+            } else {
+                localStorage.setItem("tema", "claro");
+                botonTema.textContent = "Modo oscuro";
+            }
+
+        });
+    </script>
 
 </body>
 
