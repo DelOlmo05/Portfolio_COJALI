@@ -2,188 +2,15 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Portfolio Personal</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+    <link rel="stylesheet" href="CSS/comun.css">
+    <link rel="stylesheet" href="CSS/portfolio.css">
 
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: lightgray;
-            color: black;
-        }
-
-        body.oscuro {
-            background-color: #222;
-            color: white;
-        }
-
-        body.oscuro section,
-        body.oscuro aside {
-            background-color: #333;
-        }
-
-        body.oscuro .proyecto {
-            background-color: #444;
-        }
-
-        header {
-            background-color: black;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            position: relative;
-        }
-
-        #botonTema {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            color: lightgray;
-        }
-
-        .contenedor-principal {
-            width: 90%;
-            margin: 20px auto;
-            display: flex;
-            gap: 20px;
-            align-items: flex-start;
-            flex-wrap: wrap;
-        }
-
-        main {
-            flex: 3 1 500px;
-        }
-
-        aside {
-            flex: 1 1 250px;
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-        }
-
-        section {
-            background-color: white;
-            margin-bottom: 20px;
-            padding: 20px;
-            border-radius: 8px;
-        }
-
-        h1,
-        h2,
-        h3 {
-            margin-top: 0;
-        }
-
-        #foto {
-            width: 120px;
-            height: 150px;
-            border-radius: 8px;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        a {
-            color: blue;
-        }
-
-        body.oscuro a {
-            color: lightblue;
-        }
-
-        .proyectos {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-        }
-
-        .proyecto {
-            background-color: lightgray;
-            padding: 15px;
-            border-radius: 8px;
-        }
-
-        form {
-            margin-top: 10px;
-        }
-
-        fieldset {
-            border: 1px solid gray;
-            border-radius: 8px;
-            padding: 15px;
-        }
-
-        input,
-        textarea {
-            width: 100%;
-            padding: 8px;
-            margin-top: 5px;
-        }
-
-        button {
-            padding: 10px 20px;
-            background-color: steelblue;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: gray;
-        }
-
-        footer {
-            background-color: black;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .redes-sociales {
-            margin-top: 10px;
-        }
-
-        .redes-sociales a {
-            color: white;
-            background-color: steelblue;
-            padding: 8px 12px;
-            border-radius: 5px;
-            text-decoration: none;
-            margin: 5px;
-            display: inline-block;
-        }
-
-        .redes-sociales a:hover {
-            background-color: gray;
-        }
-    </style>
 </head>
 
 <body>
@@ -195,13 +22,16 @@
         <h1>Mi Portfolio</h1>
 
         <nav>
+
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#sobreMi">Sobre mí</a></li>
                 <li><a href="#habilidades">Habilidades</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#estudios">Estudios</a></li>
                 <li><a href="#enlaces">Enlaces</a></li>
             </ul>
+
         </nav>
 
     </header>
@@ -268,30 +98,55 @@
                 <div class="proyectos">
 
                     <article class="proyecto">
+
                         <h3>Sistema de gestión empresarial</h3>
+
                         <p>
                             Aplicación orientada al control de clientes,
                             empleados, pedidos y facturación mediante MySQL.
                         </p>
+
                     </article>
 
                     <article class="proyecto">
+
                         <h3>Plataforma de análisis de datos</h3>
+
                         <p>
                             Proyecto enfocado al almacenamiento y consulta
                             de información para generar estadísticas e informes.
                         </p>
+
                     </article>
 
                     <article class="proyecto">
+
                         <h3>Gestión de gimnasio</h3>
+
                         <p>
                             Sistema para administrar usuarios, rutinas,
                             entrenamientos y seguimiento del progreso físico.
                         </p>
+
                     </article>
 
                 </div>
+
+            </section>
+
+            <section id="estudios">
+
+                <h2>Estudios</h2>
+
+                <div id="contenedorEstudios" class="estudios"></div>
+
+                <br>
+
+                <a class="boton" href="Nuevo_Estudio.html">
+
+                    Añadir nuevo estudio
+
+                </a>
 
             </section>
 
@@ -302,13 +157,17 @@
                 <p>Puedes ver mis proyectos aquí:</p>
 
                 <a href="https://github.com/DelOlmo05" target="_blank">
+
                     Mi GitHub
+
                 </a>
 
                 <p>Correo electrónico:</p>
 
                 <a href="mailto:delolmolaraa@gmail.com">
+
                     delolmolaraa@gmail.com
+
                 </a>
 
             </section>
@@ -341,22 +200,29 @@
 
                     <legend>Formulario</legend>
 
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required>
+                    <label for="nombreContacto">Nombre:</label>
+
+                    <input type="text" id="nombreContacto" required>
 
                     <br><br>
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                    <label for="emailContacto">Email:</label>
+
+                    <input type="email" id="emailContacto" required>
 
                     <br><br>
 
-                    <label for="mensaje">Mensaje:</label>
-                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                    <label for="mensajeContacto">Mensaje:</label>
+
+                    <textarea id="mensajeContacto" rows="4" required></textarea>
 
                     <br><br>
 
-                    <button type="submit">Enviar</button>
+                    <button type="submit">
+
+                        Enviar
+
+                    </button>
 
                 </fieldset>
 
@@ -368,48 +234,33 @@
 
     <footer>
 
-        <p>@Copyright 2026 - Mi Portfolio Personal</p>
+        <p>© 2026 - Mi Portfolio Personal</p>
 
         <div class="redes-sociales">
 
             <a href="https://github.com/DelOlmo05" target="_blank">
+
                 GitHub
+
             </a>
 
             <a href="mailto:delolmolaraa@gmail.com">
+
                 Email
+
             </a>
 
             <a href="#">
+
                 LinkedIn
+
             </a>
 
         </div>
 
     </footer>
 
-    <script>
-        const botonTema = document.getElementById("botonTema");
-
-        if (localStorage.getItem("tema") === "oscuro") {
-            document.body.classList.add("oscuro");
-            botonTema.textContent = "Modo claro";
-        }
-
-        botonTema.addEventListener("click", function () {
-
-            document.body.classList.toggle("oscuro");
-
-            if (document.body.classList.contains("oscuro")) {
-                localStorage.setItem("tema", "oscuro");
-                botonTema.textContent = "Modo claro";
-            } else {
-                localStorage.setItem("tema", "claro");
-                botonTema.textContent = "Modo oscuro";
-            }
-
-        });
-    </script>
+    <script src="JS/script.js"></script>
 
 </body>
 

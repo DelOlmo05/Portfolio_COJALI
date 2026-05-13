@@ -1,0 +1,11 @@
+body.oscuro .pagina-formulario {
+    background-color: rgb(45, 45, 45);
+}
+
+.pagina-formulario {
+    width: 60%;
+    margin: 25px auto;
+    background-color: white;
+    padding: 22px;
+    border-radius: 6px;
+}
