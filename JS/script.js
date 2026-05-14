@@ -1,6 +1,7 @@
 const botonTema = document.getElementById("botonTema");
 const contenedorEstudios = document.getElementById("contenedorEstudios");
 const formularioEstudio = document.getElementById("formularioEstudio");
+const contenedorRepositorios = document.getElementById("contenedorRepositorios");
 
 const estudiosIniciales = [
     {
@@ -105,23 +106,31 @@ function eliminarEstudio(posicion) {
 function crearEstudio(estudio, posicion) {
 
     const article = document.createElement("article");
+
     article.classList.add("estudio");
 
     const botonEliminar = document.createElement("span");
+
     botonEliminar.textContent = "✖";
+
     botonEliminar.classList.add("boton-eliminar");
 
     botonEliminar.addEventListener("click", function () {
+
         eliminarEstudio(posicion);
+
     });
 
     const titulo = document.createElement("h3");
+
     titulo.textContent = estudio.nombre;
 
     const centro = document.createElement("p");
+
     centro.textContent = "Centro: " + estudio.centro;
 
     const descripcion = document.createElement("p");
+
     descripcion.textContent = estudio.descripcion;
 
     article.appendChild(botonEliminar);
@@ -149,14 +158,88 @@ function mostrarEstudios() {
 
 }
 
+function crearRepositorio(repositorio) {
+
+    const article = document.createElement("article");
+
+    article.classList.add("proyecto");
+
+    const titulo = document.createElement("h3");
+
+    titulo.textContent = repositorio.name;
+
+    const descripcion = document.createElement("p");
+
+    if (repositorio.description === null) {
+
+        descripcion.textContent = "Repositorio sin descripción.";
+
+    } else {
+
+        descripcion.textContent = repositorio.description;
+
+    }
+
+    const enlace = document.createElement("a");
+
+    enlace.href = repositorio.html_url;
+
+    enlace.textContent = "Ver repositorio";
+
+    enlace.target = "_blank";
+
+    article.appendChild(titulo);
+    article.appendChild(descripcion);
+    article.appendChild(enlace);
+
+    return article;
+
+}
+
+function mostrarRepositorios() {
+
+    fetch("https://api.github.com/users/DelOlmo05/repos")
+
+        .then(function (respuesta) {
+
+            return respuesta.json();
+
+        })
+
+        .then(function (repositorios) {
+
+            contenedorRepositorios.innerHTML = "";
+
+            repositorios.forEach(function (repositorio) {
+
+                const article = crearRepositorio(repositorio);
+
+                contenedorRepositorios.appendChild(article);
+
+            });
+
+        });
+
+}
+
 cargarTema();
 
 if (botonTema !== null) {
+
     botonTema.addEventListener("click", cambiarTema);
+
 }
 
 if (contenedorEstudios !== null) {
+
     mostrarEstudios();
+
+}
+
+if (contenedorRepositorios !== null) {
+
+    mostrarRepositorios();
+
 }
 
 if (formularioEstudio !== null) {
