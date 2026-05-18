@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portfolio Personal</title>
+
+    <link rel="stylesheet" href="CSS/comun.css">
+    <link rel="stylesheet" href="CSS/portfolio.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <button id="botonTema">Modo oscuro</button>
+
+        <h1>Mi Portfolio</h1>
+
+        <nav>
+
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobreMi">Sobre mí</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#estudios">Estudios</a></li>
+                <li><a href="#enlaces">Enlaces</a></li>
+                <li><a href="#github">GitHub</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <div class="contenedor-principal">
+
+        <main>
+
+            <section id="inicio">
+
+                <h2>Inicio</h2>
+
+                <img id="foto" src="MiFoto.jpeg" alt="Foto personal">
+
+                <h3>Alberto Del Olmo Lara</h3>
+
+                <p>
+                    Estudiante de Desarrollo de Aplicaciones Multiplataforma (DAM).
+                </p>
+
+                <p>
+                    Me interesa la programación, el desarrollo web y las bases de datos.
+                </p>
+
+            </section>
+
+            <section id="sobreMi">
+
+                <h2>Sobre mí</h2>
+
+                <p>
+                    Actualmente estoy aprendiendo Java, HTML, CSS y bases de datos.
+                </p>
+
+                <p>
+                    Mi objetivo es seguir mejorando mis conocimientos y desarrollar
+                    nuevas habilidades relacionadas con la informática.
+                </p>
+
+            </section>
+
+            <section id="habilidades">
+
+                <h2>Habilidades</h2>
+
+                <ul>
+                    <li>Programación en Java</li>
+                    <li>HTML y CSS</li>
+                    <li>Bases de datos con MySQL</li>
+                    <li>Diseño básico de páginas web</li>
+                    <li>Creación de consultas SQL</li>
+                </ul>
+
+            </section>
+
+            <section id="proyectos">
+
+                <h2>Proyectos</h2>
+
+                <p>
+                    Algunos proyectos relacionados con bases de datos:
+                </p>
+
+                <div class="proyectos">
+
+                    <article class="proyecto">
+
+                        <h3>Sistema de gestión empresarial</h3>
+
+                        <p>
+                            Aplicación orientada al control de clientes,
+                            empleados, pedidos y facturación mediante MySQL.
+                        </p>
+
+                    </article>
+
+                    <article class="proyecto">
+
+                        <h3>Plataforma de análisis de datos</h3>
+
+                        <p>
+                            Proyecto enfocado al almacenamiento y consulta
+                            de información para generar estadísticas e informes.
+                        </p>
+
+                    </article>
+
+                    <article class="proyecto">
+
+                        <h3>Gestión de gimnasio</h3>
+
+                        <p>
+                            Sistema para administrar usuarios, rutinas,
+                            entrenamientos y seguimiento del progreso físico.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+            <section id="github">
+
+                <h2>Repositorios de GitHub</h2>
+
+                <p>
+                    Algunos repositorios reales de mi perfil:
+                </p>
+
+                <div id="contenedorRepositorios" class="proyectos"></div>
+
+            </section>
+
+            <section id="estudios">
+
+                <h2>Estudios</h2>
+
+                <div id="contenedorEstudios" class="estudios"></div>
+
+                <br>
+
+                <a class="boton" href="Nuevo_Estudio.html">
+
+                    Añadir nuevo estudio
+
+                </a>
+
+            </section>
+
+            <section id="enlaces">
+
+                <h2>Enlaces</h2>
+
+                <p>Puedes ver mis proyectos aquí:</p>
+
+                <a href="https://github.com/DelOlmo05" target="_blank">
+
+                    Mi GitHub
+
+                </a>
+
+                <p>Correo electrónico:</p>
+
+                <a href="mailto:delolmolaraa@gmail.com">
+
+                    delolmolaraa@gmail.com
+
+                </a>
+
+            </section>
+
+        </main>
+
+        <aside>
+
+            <h2>Información adicional</h2>
+
+            <p>
+                Este portfolio muestra mi aprendizaje en el ciclo de
+                Desarrollo de Aplicaciones Multiplataforma.
+            </p>
+
+            <h3>Áreas de interés</h3>
+
+            <ul>
+                <li>Programación</li>
+                <li>Diseño web</li>
+                <li>Bases de datos</li>
+                <li>Desarrollo de aplicaciones</li>
+            </ul>
+
+            <h3>Contacto</h3>
+
+            <form action="#" method="post">
+
+                <fieldset>
+
+                    <legend>Formulario</legend>
+
+                    <label for="nombreContacto">Nombre:</label>
+
+                    <input type="text" id="nombreContacto" required>
+
+                    <br><br>
+
+                    <label for="emailContacto">Email:</label>
+
+                    <input type="email" id="emailContacto" required>
+
+                    <br><br>
+
+                    <label for="mensajeContacto">Mensaje:</label>
+
+                    <textarea id="mensajeContacto" rows="4" required></textarea>
+
+                    <br><br>
+
+                    <button type="submit">
+
+                        Enviar
+
+                    </button>
+
+                </fieldset>
+
+            </form>
+
+        </aside>
+
+    </div>
+
+    <footer>
+
+        <p>© 2026 - Mi Portfolio Personal</p>
+
+        <div class="redes-sociales">
+
+            <a href="https://github.com/DelOlmo05" target="_blank">
+
+                GitHub
+
+            </a>
+
+            <a href="mailto:delolmolaraa@gmail.com">
+
+                Email
+
+            </a>
+
+            <a href="#">
+
+                LinkedIn
+
+            </a>
+
+        </div>
+
+    </footer>
+
+    <script src="JS/script.js"></script>
+
+</body>
+
+</html>
